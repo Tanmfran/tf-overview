@@ -60,7 +60,7 @@ export default function Home() {
       </section>
       <section className={styles.jobDetails}>
         {jobDetails.map((job) => (
-          <article key={job.jobTitle}>
+          <article key={job.name}>
             <header>
               <h1>{job.jobTitle}</h1>
               <p>{job.name}</p>
