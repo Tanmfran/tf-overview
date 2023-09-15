@@ -4,6 +4,14 @@ import { Inter } from "next/font/google";
 import React from "react";
 import Navbar from "@/app/navigation";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
+library.add(fas);
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
