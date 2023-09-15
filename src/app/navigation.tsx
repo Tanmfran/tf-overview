@@ -16,7 +16,7 @@ const navItems = [
 export default function Navbar() {
   return (
     <header className={styles.navHeader}>
-      <h1>Tannor Franks</h1>
+      <div className={styles.avatar}>TF</div>
       <nav className={styles.navigation}>
         {navItems.map((item) => (
           <Link className={styles.navItem} href={item.route} key={item.label}>

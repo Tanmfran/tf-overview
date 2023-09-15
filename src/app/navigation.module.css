@@ -5,6 +5,16 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    background: dimgrey;
+    border-radius: 100%;
+}
+
 .navigation {
     display: flex;
     align-items: center;

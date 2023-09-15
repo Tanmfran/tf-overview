@@ -11,29 +11,33 @@ const jobDetails = [
   },
   {
     name: "Core10",
-    jobTitle: "Associate Design Engineer",
+    jobTitle: "Software Engineer II",
     date: "July 2018 - August 2018",
     location: "Martin, TN",
     details: [],
   },
   {
     name: "Optum",
-    jobTitle: "Associate Design Engineer",
+    jobTitle: "Software Engineer II",
     date: "August 2022 - Feb 2021",
     location: "Nashville, TN",
     details: [],
   },
   {
     name: "Built Technologies",
-    jobTitle: "Senior Sofware Engineer",
+    jobTitle: "Senior Software Engineer",
     date: "Feb 2021 - Current",
     location: "Nashville, TN",
     details: [
       "Contributes to org-wide reference architecture documentation and tooling",
       "Technical lead for a team of 5",
       "Created the foundation for stuff",
+      "Integrated GraphQL into the organization's tech stack which eventually led to graphql being the generally accepted solution",
+      "Created a shared config utility to help ",
     ],
   },
+
+  //TODO: Pull all of my past performance reviews and use those details
 ];
 
 export default function Home() {
