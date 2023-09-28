@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
-import ResumePDF from "@/app/contact/resume";
-import { PDFViewer } from "@react-pdf/renderer";
+// import ResumePDF from "@/app/resume";
+// import { PDFViewer } from "@react-pdf/renderer";
 
 const jobDetails = [
   {
@@ -59,7 +59,7 @@ const jobDetails = [
 ];
 
 export default function Home() {
-  const [showPdf, setShowPdf] = useState(false);
+  // const [showPdf, setShowPdf] = useState(false);
 
   return (
     <main className={styles.main}>
@@ -95,24 +95,24 @@ export default function Home() {
           </article>
         ))}
       </section>
-      <button onClick={() => setShowPdf(true)}>Show Resume</button>
-      {showPdf && (
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            height: "100vh",
-            width: "100vw",
-            background: "gray",
-          }}
-        >
-          <button onClick={() => setShowPdf(false)}>Close</button>
-          <PDFViewer width="100%" height="100%">
-            <ResumePDF />
-          </PDFViewer>
-        </div>
-      )}
+      {/*<button onClick={() => setShowPdf(true)}>Show Resume</button>*/}
+      {/*{showPdf && (*/}
+      {/*  <div*/}
+      {/*    style={{*/}
+      {/*      position: "absolute",*/}
+      {/*      top: 0,*/}
+      {/*      left: 0,*/}
+      {/*      height: "100vh",*/}
+      {/*      width: "100vw",*/}
+      {/*      background: "gray",*/}
+      {/*    }}*/}
+      {/*  >*/}
+      {/*    <button onClick={() => setShowPdf(false)}>Close</button>*/}
+      {/*    <PDFViewer width="100%" height="100%">*/}
+      {/*      <ResumePDF />*/}
+      {/*    </PDFViewer>*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </main>
   );
 }
