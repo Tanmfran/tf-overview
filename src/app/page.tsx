@@ -55,6 +55,21 @@ const jobDetails = [
     location: "Dyersburg, TN",
     details: [],
   },
+  {
+    name: "University of Tennessee at Martin",
+    jobTitle: "Senior Design Project",
+    date: "Fall 2017 - Spring 2018",
+    location: "Martin, TN",
+    details: [
+      "Led a team of four members in the design, fabrication, and testing of a robot for specific tasks.",
+      "Managed the project budget, including researching, planning, and purchasing parts.",
+      "Created 3D schematics for the robot's design.",
+      "Utilized the schematics to laser cut the robot's acrylic frame and designed milled aluminum brackets to securely hold the wheels.",
+      "Developed the majority of the robot's autonomous functions using the Arduino IDE.",
+      "Implemented and fine-tuned a PID controller to enable the robot to maintain a set distance from a wall, utilizing data from ultrasound sensors.",
+      "Effectively delegated tasks to team members and ensured the overall project's success.",
+    ],
+  },
   //TODO: Pull all of my past performance reviews and use those details
 ];
 
@@ -69,31 +84,36 @@ export default function Home() {
         <p>Lives and works in Nashville, Tennessee</p>
       </section>
       <section className={styles.detailSection}>
-        <header>
-          <h1>Education</h1>
-          <p>University of Tennessee at Martin</p>
+        <header className={styles.detailSection__header}>
+          <h1>EXPERIENCE</h1>
         </header>
+        <div className={styles.detailSection__experience}>
+          {jobDetails.map((job) => (
+            <article key={job.name}>
+              <header>
+                <h1>{job.jobTitle}</h1>
+                <p>{job.name}</p>
+              </header>
+              <div>
+                <span>{job.location}</span>
+                <span> &bull; </span>
+                <span>{job.date}</span>
+              </div>
+              {job.details &&
+                job.details.map((detail, i) => <p key={i}>{detail}</p>)}
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className={styles.detailSection}>
+        <header className={styles.detailSection__header}>
+          <h1>EDUCATION</h1>
+        </header>
+        <p>University of Tennessee at Martin</p>
         <p>
           Bachelor of Science: Engineering With a Concentration In Electrical
         </p>
         <p>Minor: Japanese</p>
-      </section>
-      <section className={styles.detailSection__jobs}>
-        {jobDetails.map((job) => (
-          <article key={job.name}>
-            <header>
-              <h1>{job.jobTitle}</h1>
-              <p>{job.name}</p>
-            </header>
-            <div>
-              <span>{job.location}</span>
-              <span> &bull; </span>
-              <span>{job.date}</span>
-            </div>
-            {job.details &&
-              job.details.map((detail, i) => <p key={i}>{detail}</p>)}
-          </article>
-        ))}
       </section>
       {/*<button onClick={() => setShowPdf(true)}>Show Resume</button>*/}
       {/*{showPdf && (*/}

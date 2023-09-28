@@ -7,13 +7,16 @@
 
 
 .detailSection {
-  border-bottom: 1px solid red;
   padding-bottom: 16px;
-
 }
 
-.detailSection__jobs {
+.detailSection__experience {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.detailSection__header {
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
 }
