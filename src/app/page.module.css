@@ -5,7 +5,14 @@
   padding: 16px;
 }
 
-.jobDetails {
+
+.detailSection {
+  border-bottom: 1px solid red;
+  padding-bottom: 16px;
+
+}
+
+.detailSection__jobs {
   display: flex;
   flex-direction: column;
   gap: 16px;
